@@ -137,7 +137,7 @@
     resultStatus.textContent = line;
     resultStatus.className = "status";
     till.hidden = false;
-    tillCopy.textContent = R.PRICE_EUR + " € — a calendar reminder and a receipt with this date in the margin. This copy does not charge a card. The button opens the files only for this date and this store. Refresh the page and they close again. The photo is not saved.";
+    tillCopy.textContent = R.PRICE_EUR + " €. The button opens Gumroad with this date. Gumroad delivers the file after payment. The date stays free. The photo is not saved.";
     downloads.hidden = !R.unlockMatches(unlock, purchaseOf(calc));
   }
 
@@ -292,8 +292,8 @@
 
   document.getElementById("open-files").addEventListener("click", function () {
     if (!current || !current.sellable) return;
-    unlock = purchaseOf(current);
-    downloads.hidden = false;
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(anchor.value)) return;
+    window.location.assign("https://mergescribe.gumroad.com/l/return-files?wanted=true&ReceiptDate=" + encodeURIComponent(anchor.value));
   });
 
   document.getElementById("get-ics").addEventListener("click", function () {

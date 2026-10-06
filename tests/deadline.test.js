@@ -119,8 +119,10 @@ rules.stores.forEach(function (store) {
   const html = fs.readFileSync(path.join(root, store.page), "utf8");
   assert.ok(html.includes(store.source), store.id);
   assert.ok(html.includes(store.title.replace(/&/g, "&amp;")), store.id);
-  assert.ok(html.includes("does not charge a card"), store.id);
-  assert.ok(!/касс|Gumroad|gumroad|checkout/i.test(html), store.id);
+  assert.ok(!html.includes("does not charge a card"), store.id);
+  assert.ok(!/касс|checkout/i.test(html), store.id);
+  assert.ok(html.includes("Open the files for this purchase"), store.id);
 });
 
-console.log("deadline tests ok");
+assert.ok(app.includes("https://mergescribe.gumroad.com/l/return-files?wanted=true&ReceiptDate="), "pay-url");
+assert.ok(!app.includes("does not charge a card"), "app-card");

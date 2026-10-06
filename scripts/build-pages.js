@@ -80,7 +80,7 @@ function page(opts) {
     form(),
     resultBlock(),
     opts.rule || '<section class="rule" id="rule"></section>',
-    "<footer><p>The date is free. Files for this purchase are 2 €. This copy does not charge a card. Not legal advice. If the order states a different date, that date wins.</p></footer>",
+    "<footer><p>The date is free. Files for this purchase are 2 €. Not legal advice. If the order states a different date, that date wins.</p></footer>",
     "</main>",
     '<script src="' + prefix + 'js/rules.js"></script>',
     '<script src="' + prefix + 'js/app.js"></script>',
@@ -107,7 +107,7 @@ const index = page({
   title: "UK return windows: IKEA, Amazon, Zalando, H&M and Apple",
   h1: "UK return windows: IKEA, Amazon, Zalando, H&M and Apple",
   description: "IKEA UK, Amazon UK, Zalando UK, H&M UK and Apple UK return windows. The last day is free. One site, five pages.",
-  lead: "Enter the store and the date on the receipt. The last day is free. For 2 € this page opens a calendar reminder and a receipt with that date in the margin, for this purchase only. This copy does not charge a card.",
+  lead: "Enter the store and the date on the receipt. The last day is free. Files for this purchase are 2 €.",
   extra: "<p>Five stores. Only windows checked against the store's own page. Missing stores are not invented.</p>",
 });
 
