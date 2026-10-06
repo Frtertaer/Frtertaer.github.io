@@ -13,6 +13,7 @@
 <p class="brand">Returnline</p>
 <h1>UK return windows: IKEA, Amazon, Zalando, H&amp;M and Apple</h1>
 <p class="lead">Enter the store and the date on the receipt. The last day is free. Files for this purchase are 2 €.</p>
+<p>After payment, enter the date again in the file. This page does not copy it.</p>
 <nav aria-label="Stores"><a href="index.html">All</a><a href="ikea/index.html">IKEA UK</a><a href="amazon/index.html">Amazon UK</a><a href="zalando/index.html">Zalando UK</a><a href="hm/index.html">H&amp;M UK</a><a href="apple/index.html">Apple UK</a></nav>
 <p>Five stores. Only windows checked against the store's own page. Missing stores are not invented.</p>
 <form id="calc" class="slip"><label class="field"><span>Store</span><select id="store" name="store" required></select></label><label class="field"><span id="anchor-label">Date</span><input id="anchor" name="anchor" type="date" required></label><label id="sale-wrap" class="check" hidden><input id="sale" type="checkbox"><span>Sale item — shorter window</span></label><label class="photo"><span>Receipt photo — only to read the date</span><input id="photo" name="photo" type="file" accept="image/*"></label><button type="button" class="ghost" id="read-photo">Read the date</button><p id="photo-note" aria-live="polite"></p><ul id="candidates" hidden></ul><button type="submit">Show the last day</button></form>

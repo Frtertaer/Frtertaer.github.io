@@ -75,6 +75,7 @@ function page(opts) {
     '<p class="brand">Returnline</p>',
     "<h1>" + esc(opts.h1) + "</h1>",
     '<p class="lead">' + esc(opts.lead) + "</p>",
+    "<p>After payment, enter the date again in the file. This page does not copy it.</p>",
     nav(prefix, opts.storeId || ""),
     opts.extra || "",
     form(),

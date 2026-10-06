@@ -137,7 +137,7 @@
     resultStatus.textContent = line;
     resultStatus.className = "status";
     till.hidden = false;
-    tillCopy.textContent = R.PRICE_EUR + " €. The button opens Gumroad with this date. Gumroad delivers the file after payment. The date stays free. The photo is not saved.";
+    tillCopy.textContent = R.PRICE_EUR + " €. The button opens Gumroad. After payment, enter the date again in the file. This page does not copy it.";
     downloads.hidden = !R.unlockMatches(unlock, purchaseOf(calc));
   }
 

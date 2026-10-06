@@ -122,7 +122,10 @@ rules.stores.forEach(function (store) {
   assert.ok(!html.includes("does not charge a card"), store.id);
   assert.ok(!/касс|checkout/i.test(html), store.id);
   assert.ok(html.includes("Open the files for this purchase"), store.id);
+  assert.ok(html.includes("After payment, enter the date again in the file."), store.id);
 });
+assert.ok(fs.readFileSync(path.join(root, "index.html"), "utf8").includes("After payment, enter the date again in the file."), "index-again");
+assert.ok(app.includes("After payment, enter the date again in the file."), "pay-again");
 
 assert.ok(app.includes("https://mergescribe.gumroad.com/l/return-files?wanted=true&ReceiptDate="), "pay-url");
 assert.ok(!app.includes("does not charge a card"), "app-card");

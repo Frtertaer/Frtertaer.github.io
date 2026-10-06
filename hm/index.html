@@ -13,6 +13,7 @@
 <p class="brand">Returnline</p>
 <h1>H&amp;M UK return window: last day from the delivery date</h1>
 <p class="lead">H&amp;M UK: an ordinary purchase can be returned within 30 days of delivery. A sale item is 14 days. Tick sale if the receipt says it was on sale. This page will not choose between two dates.</p>
+<p>After payment, enter the date again in the file. This page does not copy it.</p>
 <nav aria-label="Stores"><a href="../index.html">All</a><a href="../ikea/index.html">IKEA UK</a><a href="../amazon/index.html">Amazon UK</a><a href="../zalando/index.html">Zalando UK</a><strong>H&amp;M UK</strong><a href="../apple/index.html">Apple UK</a></nav>
 
 <form id="calc" class="slip"><label class="field"><span>Store</span><select id="store" name="store" required></select></label><label class="field"><span id="anchor-label">Date</span><input id="anchor" name="anchor" type="date" required></label><label id="sale-wrap" class="check" hidden><input id="sale" type="checkbox"><span>Sale item — shorter window</span></label><label class="photo"><span>Receipt photo — only to read the date</span><input id="photo" name="photo" type="file" accept="image/*"></label><button type="button" class="ghost" id="read-photo">Read the date</button><p id="photo-note" aria-live="polite"></p><ul id="candidates" hidden></ul><button type="submit">Show the last day</button></form>
